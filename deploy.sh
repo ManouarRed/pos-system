@@ -55,6 +55,12 @@ npm install
 npm run build
 cd ..
 
+# Copy built frontend files to the project root
+echo "--- Copying frontend build to project root ---"
+rm -rf ./assets # Remove old assets directory if it exists in root
+rm -f ./index.html # Remove old index.html if it exists in root
+cp -r front/dist/. . || { echo "Error: Failed to copy frontend build to root."; exit 1; }
+
 echo "--- Deploying Backend ---"
 cd back || { echo "Error: 'back' directory not found."; exit 1; }
 npm install
