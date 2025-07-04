@@ -10,11 +10,13 @@ const __dirname = path.dirname(__filename);
 export default defineConfig(({ mode }) => {
     // Load .env files from the project root
     const env = loadEnv(mode, '.', ''); 
+    console.log('VITE_API_BASE_URL from .env.local:', env.VITE_API_BASE_URL); // Added for debugging
     return {
       define: {
         // Ensure these are still needed for your Gemini API integration
         'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
+        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
+        'import.meta.env.VITE_API_BASE_URL': JSON.stringify(env.VITE_API_BASE_URL)
       },
       resolve: {
         alias: {
