@@ -1,0 +1,90 @@
+[
+  {
+    "id": "prod_spp899",
+    "title": "Advanced Smartphone Pro",
+    "price": 899.99,
+    "image": "https://via.placeholder.com/150/4A90E2/FFFFFF?Text=SmartphonePro",
+    "code": "SPP899",
+    "sizes": [{ "size": "128GB", "stock": 30 }, { "size": "256GB", "stock": 20 }, { "size": "512GB", "stock": 10 }],
+    "categoryId": "cat_electronics_seed",
+    "manufacturerId": "man_techcorp_seed",
+    "isVisible": true
+  },
+  {
+    "id": "prod_hnc249",
+    "title": "Noise-Cancelling Over-Ear Headphones",
+    "price": 249.00,
+    "image": "https://via.placeholder.com/150/D0021B/FFFFFF?Text=HeadphonesNC",
+    "code": "HNC249",
+    "sizes": [{ "size": "One Size", "stock": 45 }],
+    "categoryId": "cat_electronics_seed",
+    "manufacturerId": "man_gizmo_seed",
+    "isVisible": true
+  },
+  {
+    "id": "prod_lts120",
+    "title": "Luxury Leather Wallet",
+    "price": 120.50,
+    "image": "https://via.placeholder.com/150/F5A623/FFFFFF?Text=LeatherWallet",
+    "code": "LLW120",
+    "sizes": [{ "size": "Standard", "stock": 60 }],
+    "categoryId": "cat_accessories_seed",
+    "manufacturerId": "man_fashionista_seed",
+    "isVisible": true
+  },
+  {
+    "id": "prod_cts075",
+    "title": "Classic T-Shirt",
+    "price": 25.99,
+    "image": "https://via.placeholder.com/150/7ED321/FFFFFF?Text=TShirt",
+    "code": "CTS075",
+    "sizes": [{ "size": "S", "stock": 50 }, { "size": "M", "stock": 70 }, { "size": "L", "stock": 60 }, { "size": "XL", "stock": 30 }],
+    "categoryId": "cat_clothing_seed",
+    "manufacturerId": "man_fashionista_seed",
+    "isVisible": true
+  },
+  {
+    "id": "prod_bkr015",
+    "title": "The Great Adventure Novel",
+    "price": 15.00,
+    "image": "https://via.placeholder.com/150/BD10E0/FFFFFF?Text=BookNovel",
+    "code": "BKR015",
+    "sizes": [{ "size": "Paperback", "stock": 100 }, { "size": "Hardcover", "stock": 25 }],
+    "categoryId": "cat_books_seed",
+    "manufacturerId": "man_pubhouse_seed",
+    "isVisible": true
+  },
+  {
+    "id": "prod_rsk180",
+    "title": "Running Sneakers",
+    "price": 180.00,
+    "image": "https://via.placeholder.com/150/4A90E2/FFFFFF?Text=Sneakers",
+    "code": "RSK180",
+    "sizes": [{ "size": "39", "stock": 15 }, { "size": "40", "stock": 25 }, { "size": "41", "stock": 30 }, { "size": "42", "stock": 20 }, { "size": "43", "stock": 10 }],
+    "categoryId": "cat_footwear_seed",
+    "manufacturerId": "man_shoebrand_seed",
+    "isVisible": true
+  },
+  {
+    "id": "prod_coff045",
+    "title": "Smart Coffee Maker",
+    "price": 85.00,
+    "image": "https://via.placeholder.com/150/9013FE/FFFFFF?Text=CoffeeMaker",
+    "code": "COFF045",
+    "sizes": [{ "size": "Standard", "stock": 22 }],
+    "categoryId": "cat_home_garden_seed",
+    "manufacturerId": "man_homewares_seed",
+    "isVisible": true
+  },
+  {
+    "id": "prod_boardg030",
+    "title": "Strategy Board Game",
+    "price": 45.50,
+    "image": "https://via.placeholder.com/150/F8E71C/000000?Text=BoardGame",
+    "code": "BG030",
+    "sizes": [{ "size": "Standard", "stock": 35 }],
+    "categoryId": "cat_toys_games_seed",
+    "manufacturerId": "man_playful_seed",
+    "isVisible": false
+  }
+]

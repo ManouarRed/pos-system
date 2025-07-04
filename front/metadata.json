@@ -1,0 +1,6 @@
+{
+  "name": "React POS System",
+  "description": "A frontend Point of Sale application for managing product sales, built with React and Tailwind CSS. It includes features for adding products to a sale, calculating prices with discounts, selecting payment methods, and submitting sale reports. Product data is mocked for demonstration.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}

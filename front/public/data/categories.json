@@ -1,0 +1,10 @@
+[
+  { "id": "cat_electronics_seed", "name": "Electronics" },
+  { "id": "cat_clothing_seed", "name": "Clothing" },
+  { "id": "cat_books_seed", "name": "Books" },
+  { "id": "cat_footwear_seed", "name": "Footwear" },
+  { "id": "cat_accessories_seed", "name": "Accessories" },
+  { "id": "cat_home_garden_seed", "name": "Home & Garden" },
+  { "id": "cat_toys_games_seed", "name": "Toys & Games" },
+  { "id": "cat_uncategorized", "name": "Uncategorized" }
+]
