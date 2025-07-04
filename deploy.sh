@@ -57,13 +57,24 @@ cd ..
 
 # Copy built frontend files to the project root
 echo "--- Copying frontend build to project root ---"
-rm -rf ./assets # Remove old assets directory if it exists in root
-rm -f ./index.html # Remove old index.html if it exists in root
-cp -r front/dist/. . || { echo "Error: Failed to copy frontend build to root."; exit 1; }
+rm -rf ./assets
+rm -f ./index.html
+cp -r front/dist/. .
 
 echo "--- Deploying Backend ---"
 cd back || { echo "Error: 'back' directory not found."; exit 1; }
 npm install
+
+# Inject allowed origins if not set in .env
+if ! grep -q "CORS_ORIGIN=" .env; then
+  echo 'CORS_ORIGIN=https://store.doubleredcars.sk' >> .env
+  echo 'Added CORS_ORIGIN to .env'
+fi
+
+# Optional: Add localhost to backend CORS logic (if not already coded)
+if ! grep -q "NODE_ENV=" .env; then
+  echo 'NODE_ENV=production' >> .env
+fi
 
 echo "--- Starting Backend with PM2 ---"
 pm2 delete pos-backend 2>/dev/null || true
