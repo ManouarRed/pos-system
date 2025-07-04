@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 
 export default defineConfig(({ mode }) => {
     // Load .env files from the project root
-    const env = loadEnv(mode, '.', ''); 
+    const env = loadEnv(mode, process.cwd(), ''); 
     console.log('VITE_API_BASE_URL from .env.local:', env.VITE_API_BASE_URL); // Added for debugging
     return {
       define: {
