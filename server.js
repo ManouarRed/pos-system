@@ -19,7 +19,7 @@ if (missing.length) {
 }
 
 // CORS config
-const corsOrigin = process.env.CORS_ORIGIN || 'https://store.doubleredcars.sk'; // Allow frontend domain
+const corsOrigin = process.env.CORS_ORIGIN || '*';
 app.use(cors({
   origin: corsOrigin,
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
@@ -27,10 +27,6 @@ app.use(cors({
 }));
 
 app.use(express.json());
-
-app.get('/', (req, res) => {
-  res.send('Backend is running');
-});
 
 // Initialize DB schema function
 async function initializeDatabaseSchema() {
@@ -81,15 +77,22 @@ fs.readdirSync(routesDir).forEach(file => {
 });
 
 // API health check endpoint
-app.get('/status', (req, res) => {
-  res.sendFile(path.join(__dirname, 'status.html'));
-});
-
 app.get('/api', (req, res) => {
   res.json({ status: 'API is running', time: new Date().toISOString() });
 });
 
+// Serve frontend static files built by Vite
+const frontendDist = path.join(__dirname, '../front/dist');
+app.use(express.static(frontendDist));
 
+// SPA fallback - serve index.html for all non-API routes
+app.get('*', (req, res) => {
+  if (!req.path.startsWith('/api')) {
+    res.sendFile(path.join(frontendDist, 'index.html'));
+  } else {
+    res.status(404).json({ error: 'API endpoint not found' });
+  }
+});
 
 // Global error handler
 app.use((err, req, res, next) => {
@@ -102,7 +105,7 @@ app.use((err, req, res, next) => {
   try {
     await initializeDatabaseSchema();
     app.listen(PORT, () => {
-      console.log(`Server listening on http://localhost:${PORT}`);
+      console.log(`Server listening on ${process.env.API_BASE_URL || `http://localhost:${PORT}`}`);
       console.log(`Frontend served from: ${frontendDist}`);
       console.log(`API available under /api`);
     });
