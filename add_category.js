@@ -3,7 +3,7 @@ const axios = require('axios');
 async function loginAndDeleteAndAddCategory() {
   try {
     // 1. Login to get a token
-    const loginResponse = await axios.post('http://localhost:3001/api/auth/login', {
+    const loginResponse = await axios.post(`${process.env.API_BASE_URL}/api/auth/login`, {
       username: 'newadmin',
       password: 'newpassword'
     });
@@ -15,7 +15,7 @@ async function loginAndDeleteAndAddCategory() {
     const oldCategoryUuid = '8199cb23-80f9-408c-8534-898d0dbd68b8';
     try {
       console.log(`Attempting to delete category with old UUID: ${oldCategoryUuid}`);
-      await axios.delete(`http://localhost:3001/api/categories/${oldCategoryUuid}`, {
+      await axios.delete(`${process.env.API_BASE_URL}/api/categories/${oldCategoryUuid}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -33,7 +33,7 @@ async function loginAndDeleteAndAddCategory() {
     };
 
     const addCategoryResponse = await axios.post(
-      'http://localhost:3001/api/categories',
+      `${process.env.API_BASE_URL}/api/categories`,
       categoryData,
       {
         headers: {
