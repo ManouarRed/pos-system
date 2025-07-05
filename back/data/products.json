@@ -1,0 +1,56 @@
+
+[
+  {
+    "id": "prod_spp899",
+    "title": "Advanced Smartphone Pro",
+    "price": 899.99,
+    "image": "https://via.placeholder.com/150/4A90E2/FFFFFF?Text=SmartphonePro",
+    "code": "SPP899",
+    "sizes": [
+      { "size": "128GB", "stock": 30 },
+      { "size": "256GB", "stock": 20 },
+      { "size": "512GB", "stock": 10 }
+    ],
+    "categoryId": "cat_electronics_seed",
+    "manufacturerId": "man_techcorp_seed",
+    "isVisible": true
+  },
+  {
+    "id": "prod_hnc249",
+    "title": "Noise-Cancelling Over-Ear Headphones",
+    "price": 249.00,
+    "image": "https://via.placeholder.com/150/D0021B/FFFFFF?Text=HeadphonesNC",
+    "code": "HNC249",
+    "sizes": [{ "size": "One Size", "stock": 45 }],
+    "categoryId": "cat_electronics_seed",
+    "manufacturerId": "man_gizmo_seed",
+    "isVisible": true
+  },
+  {
+    "id": "prod_lts120",
+    "title": "Luxury Leather Wallet",
+    "price": 120.50,
+    "image": "https://via.placeholder.com/150/F5A623/FFFFFF?Text=LeatherWallet",
+    "code": "LLW120",
+    "sizes": [{ "size": "Standard", "stock": 60 }],
+    "categoryId": "cat_accessories_seed",
+    "manufacturerId": "man_fashionista_seed",
+    "isVisible": true
+  },
+  {
+    "id": "prod_cts075",
+    "title": "Classic T-Shirt",
+    "price": 25.99,
+    "image": "https://via.placeholder.com/150/7ED321/FFFFFF?Text=TShirt",
+    "code": "CTS075",
+    "sizes": [
+      { "size": "S", "stock": 50 },
+      { "size": "M", "stock": 70 },
+      { "size": "L", "stock": 60 },
+      { "size": "XL", "stock": 30 }
+    ],
+    "categoryId": "cat_clothing_seed",
+    "manufacturerId": "man_fashionista_seed",
+    "isVisible": true
+  }
+]

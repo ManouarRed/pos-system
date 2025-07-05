@@ -1,0 +1,10 @@
+[
+  { "id": "man_techcorp_seed", "name": "TechCorp" },
+  { "id": "man_fashionista_seed", "name": "Fashionista Inc." },
+  { "id": "man_pubhouse_seed", "name": "Publishing House Ltd." },
+  { "id": "man_shoebrand_seed", "name": "Global Shoes Co." },
+  { "id": "man_gizmo_seed", "name": "GizmoCrafters" },
+  { "id": "man_homewares_seed", "name": "HomeWares LLC" },
+  { "id": "man_playful_seed", "name": "Playful Solutions" },
+  { "id": "man_unknown", "name": "Unknown Manufacturer" }
+]

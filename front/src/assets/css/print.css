@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+@media print {
+  /* Hide non-essential UI elements */
+  .main-ui-content, .sidebar, .pagination-controls {
+    display: none !important;
+  }
+
+  /* Ensure the print content takes up the full space */
+  .print-only-content {
+    display: block !important;
+    visibility: visible !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    background-color: white;
+  }
+
+  /* Make sure all children within the print container are also visible */
+  .print-only-content * {
+    visibility: visible !important;
+  }
+
+  /* Remove any shadows or rings that might be applied to the table container */
+  .print-only-content .shadow,
+  .print-only-content .ring-1 {
+    box-shadow: none !important;
+    ring-width: 0 !important;
+  }
+
+  /* Ensure the table uses the full width within the print container */
+  .print-only-content table {
+    width: 100% !important;
+  }
+}
+
+/* General styles for content that is part of the print view */
+.printable-content table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.printable-content th,
+.printable-content td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.printable-content th {
+  background-color: #f2f2f2;
+}
+
+.printable-content img {
+  max-width: 50px;
+  height: auto;
+}
+
+.bg-indigo-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(6, 6, 6);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  
+}
+
+* {
+  font-family: 'Karla', sans-serif !important;
+}
+body {
+  font-family: 'Karla', sans-serif;
+}
+h1, h2, h3, h4, h5, h6,
+p, span, a, button, input, textarea, select {
+  font-family: 'Karla', sans-serif;
+}
