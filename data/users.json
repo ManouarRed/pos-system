@@ -1,0 +1,15 @@
+
+[
+  {
+    "id": "user_admin_01_seed",
+    "username": "admin",
+    "hashedPassword": "password", 
+    "role": "admin"
+  },
+  {
+    "id": "user_employee_01_seed",
+    "username": "employee",
+    "hashedPassword": "password",
+    "role": "employee"
+  }
+]
